@@ -41,8 +41,8 @@ const Layout = ({ children, location }) => {
       <Helmet
         title="Portfolio"
         meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
+          { name: 'Michihiro Kawaji', content: 'Portfolio' },
+          { name: 'portfolio react', content: 'Portfolio' },
         ]}
       >
         <html lang="en" />
