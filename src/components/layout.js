@@ -27,19 +27,21 @@ const Layout = ({ children, location }) => {
 
   return (
     <StaticQuery
-      query={graphql`
-        query SiteTitleQuery {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-        }
-      `}
+      // query={graphql`
+      //   query SiteTitleQuery {
+      //     site {
+      //       siteMetadata {
+      //         title
+      //       }
+      //     }
+      //   }
+      // `}
+      // {data.site.siteMetadata.title}
+
       render={data => (
         <>
           <Helmet
-            title={data.site.siteMetadata.title}
+            title="Michi’s Protfolio"
             meta={[
               { name: 'description', content: 'Sample' },
               { name: 'keywords', content: 'sample, something' },
