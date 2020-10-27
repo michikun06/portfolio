@@ -27,31 +27,31 @@ const Layout = ({ children, location }) => {
 
   return (
     <StaticQuery
-      // query={graphql`
-      //   query SiteTitleQuery {
-      //     site {
-      //       siteMetadata {
-      //         title
-      //       }
-      //     }
-      //   }
-      // `}
-      // {data.site.siteMetadata.title}
-
-      render={data => (
-        <>
-          <Helmet
-            title="Michi’s Protfolio"
-            meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
-            ]}
-          >
-            <html lang="en" />
-          </Helmet>
-          {content}
-        </>
-      )}
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
+          }
+        }
+      `}
+      render={data => <div>{JSON.stringify(data)}</div>
+        //   (
+        // <>
+        //   <Helmet
+        //     title={data.site.siteMetadata.title}
+        //     meta={[
+        //       { name: 'description', content: 'Sample' },
+        //       { name: 'keywords', content: 'sample, something' },
+        //     ]}
+        //   >
+        //     <html lang="en" />
+        //   </Helmet>
+        //   {content}
+        // </>
+        // )
+      }
     />
   )
 }
