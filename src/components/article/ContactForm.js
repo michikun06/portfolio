@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import {
     Formik,
     Form,
@@ -8,10 +8,8 @@ import {
 } from 'formik';
 
 
-// xoxb - 1458418269362 - 1471651318529 - dh3UexgjeKbT1JXu7qmHMvXL
 
 import * as Yup from 'yup';
-const webhookURL = "slack_Webhooks"
 
 /**
  * 非同期 Varidation
@@ -41,22 +39,23 @@ class ContactForm extends Component {
      * フォーム送信後の処理
      */
     handleSubmit(form, { resetForm }) {
-        let text = `■ 名前: ${form.name}\n■ メールアドレス: ${form.email}\n■ お問い合わせ内容: ${form.content}`
-        let data = {
-            method: 'post',
-            baseURL: webhookURL,
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-            },
-            data: `payload={ "text": "${text}"}`
-        };
-        try {
-            axios.request(data)
-            alert('送信しました')
-            resetForm()
-        } catch (error) {
-            alert('送信に失敗しました')
-        }
+        alert('送信しました')
+        // let text = `■ 名前: ${form.name}\n■ メールアドレス: ${form.email}\n■ お問い合わせ内容: ${form.content}`
+        // let data = {
+        //     method: 'post',
+        //     baseURL: webhookURL,
+        //     headers: {
+        //         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        //     },
+        //     data: `payload={ "text": "${text}"}`
+        // };
+        // try {
+        //     axios.request(data)
+        //     alert('送信しました')
+        //     resetForm()
+        // } catch (error) {
+        //     alert('送信に失敗しました')
+        // }
     }
     render() {
         return (
@@ -65,7 +64,7 @@ class ContactForm extends Component {
                 initialValues={this.defaultFormState}
                 validationSchema={validationSchema}
             >
-                <Form>
+                <form name="contact" method="POST" netlify>
 
                     <div className="form-field field half first">
                         <label htmlFor="name">Name</label>
@@ -121,12 +120,7 @@ class ContactForm extends Component {
                         </li>
                     </ul>
 
-
-
-
-
-
-                </Form>
+                </form>
             </Formik>
         )
     }
