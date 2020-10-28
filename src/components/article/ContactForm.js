@@ -8,7 +8,7 @@ import {
 } from 'formik';
 
 import * as Yup from 'yup';
-const webhookURL = 'https://hooks.slack.com/services/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';
+const webhookURL = 'https://hooks.slack.com/services/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';
 
 /**
  * 非同期 Varidation
