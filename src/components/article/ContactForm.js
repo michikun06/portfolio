@@ -8,8 +8,7 @@ import {
 } from 'formik';
 
 import * as Yup from 'yup';
-const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
-const webhookURL = 'https://hooks.slack.com/services/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';
+const webhookURL = 'https://hooks.slack.com/services/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';
 
 /**
  * 非同期 Varidation
@@ -52,7 +51,6 @@ class ContactForm extends Component {
             axios.request(data)
             alert('送信しました')
             resetForm()
-            // Router.push('/contact') // リダイレクト
         } catch (error) {
             alert('送信に失敗しました')
         }
