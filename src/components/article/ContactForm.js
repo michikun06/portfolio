@@ -7,8 +7,11 @@ import {
     ErrorMessage
 } from 'formik';
 
+
+// xoxb - 1458418269362 - 1471651318529 - dh3UexgjeKbT1JXu7qmHMvXL
+
 import * as Yup from 'yup';
-const webhookURL = 'https://hooks.slack.com/services/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';
+const webhookURL = "slack_Webhooks"
 
 /**
  * 非同期 Varidation
