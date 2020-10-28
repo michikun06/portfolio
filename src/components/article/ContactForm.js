@@ -64,7 +64,7 @@ class ContactForm extends Component {
                 initialValues={this.defaultFormState}
                 validationSchema={validationSchema}
             >
-                <form name="contact" method="POST" netlify>
+                <form name="contact" method="POST" data-netlify="true">
 
                     <div className="form-field field half first">
                         <label htmlFor="name">Name</label>
