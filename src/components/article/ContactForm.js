@@ -29,11 +29,6 @@ const validationSchema = Yup.object().shape({
 class ContactForm extends Component {
     constructor(props) {
         super(props);
-        this.defaultFormState = {
-            name: '',
-            email: '',
-            content: '',
-        }
     }
     /**
      * フォーム送信後の処理
@@ -61,18 +56,13 @@ class ContactForm extends Component {
         return (
             <Formik
                 onSubmit={this.handleSubmit}
-                initialValues={this.defaultFormState}
                 validationSchema={validationSchema}
             >
-                <form name="contact" method="POST" data-netlify="true">
+                <form name="contact" method="POST" netlify>
 
                     <div className="form-field field half first">
                         <label htmlFor="name">Name</label>
-                        <Field
-                            name="name"
-                            type="text"
-                            id="name"
-                        />
+                        <input type="text" name="name" id="name" />
                         <ErrorMessage
                             name="name"
                             component="div"
@@ -83,12 +73,7 @@ class ContactForm extends Component {
 
                     <div className="form-field field half first">
                         <label htmlFor="email">Email</label>
-                        <Field
-                            name="email"
-                            type="email"
-                            id="email"
-                            color="red"
-                        />
+                        <input type="text" name="email" id="email" />
                         <ErrorMessage
                             name="email"
                             component="div"
@@ -99,10 +84,7 @@ class ContactForm extends Component {
 
                     <div className="form-field">
                         <label htmlFor="message">Message</label>
-                        <Field
-                            name="content"
-                            component="textarea"
-                        />
+                        <textarea name="message" id="message" rows="4"></textarea>
                         <ErrorMessage
                             name="content"
                             component="div"
