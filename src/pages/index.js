@@ -24,7 +24,7 @@ class IndexPage extends React.Component {
   componentDidMount() {
     this.timeoutId = setTimeout(() => {
       this.setState({ loading: '' });
-    }, 100);
+    }, 1000);
     document.addEventListener('mousedown', this.handleClickOutside);
   }
 
