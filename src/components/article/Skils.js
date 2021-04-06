@@ -29,6 +29,7 @@ const Skils = ({ close, articleTimeout, article }) => {
                     <li><span style={skil}>CSS　</span>:　★★★★</li>
                     <li><span style={skil}>JavaScript　</span>:　★★★</li>
                     <li><span style={skil}>jQuery　</span>:　★★★</li>
+                    <li><span style={skil}>PHP　</span>:　★★</li>
                     <li><span style={skil}>Bootstrap　</span>:　★★★★</li>
                     <li><span style={skil}>git　</span>:　★★★</li>
                     <li><span style={skil}>React　</span>:　★★★</li>

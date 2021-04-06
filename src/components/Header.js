@@ -22,7 +22,7 @@ const Header = props => (
         <ul className="icons">
           <li>
             <a
-              href="https://twitter.com/michi252417"
+              href="https://twitter.com/MICHIHIROKAWAJI"
               className="icon fa-twitter"
             >
               <span className="label">Twitter</span>
